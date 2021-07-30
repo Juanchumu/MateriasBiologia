@@ -31,7 +31,10 @@ header ul li{
   display: inline-block;
   height: 20px;
   width: auto;
-  border: 2px solid black;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: white;
+  text-decoration: none;
 }
 
 
@@ -50,10 +53,20 @@ header ul li{
   background-color: gray;
   width: 70%;
 }
+.contenido_Android{
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: gray;
+}
 
 
 /*retoques del footer*/
 footer{
+  text-align: center;
   background-color: #007dec;
 }
 
@@ -85,7 +98,9 @@ footer{
 .P_Plan{
   text-decoration: underline;
 }
-
+.Tabla{
+  margin-bottom: 30px;
+}
 .Tabla_Header{
   text-align: center;
   font-size: 14px;
