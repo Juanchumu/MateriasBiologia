@@ -124,11 +124,17 @@ footer{
   border: 1px solid black;
   height: 40px;
 }
+.Primero{
+  background-color: #a0a0ff;
+}
+.Segundo{
+  background-color: #4646ff8f;
+}
+.Ambos{
+  background-color: #e2e3e3;
+}
 .Hecha_True{
   background-color: #4ee64e;
-}
-.Hecha_False{
-  background-color: #a0a0ff;
 }
 
 
