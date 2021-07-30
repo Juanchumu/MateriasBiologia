@@ -18,17 +18,15 @@ header{
   padding-left: 25px;
 }
 .Pestanias{
-
+  width: 88%
 }
 header ul{
 }
-
 header ul li{
   padding-left: 15px;
   padding-right: 15px;
   margin-left: 10px;
   margin-right: 10px;
-  display: inline-block;
   height: 20px;
   width: auto;
   border: 1px solid black;
@@ -36,7 +34,12 @@ header ul li{
   background-color: white;
   text-decoration: none;
 }
-
+.List_Item{
+  display: inline-block;
+}
+.List_Item_Android{
+  display: grid;
+}
 
 
 /*Retoques del contenido*/
@@ -72,7 +75,8 @@ footer{
 
 
 /*Componente formulario*/
-.Elegir_Plan{
+.Elegir_Plan_Android{
+  display: grid;
 }
 .Botones_Elegir{
   margin-left: 10px;
@@ -92,6 +96,10 @@ footer{
   background-color: #fff;
 }
 .Elegir_Orientacion{
+  padding-bottom: 30px;
+}
+.Elegir_Orientacion_Android{
+  display: grid;
   padding-bottom: 30px;
 }
 
