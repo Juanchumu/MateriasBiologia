@@ -136,7 +136,24 @@ footer{
 .Hecha_True{
   background-color: #4ee64e;
 }
+.Tesis{
+  position: relative;
+  animation: mover_tesis 12s infinite;
+}
+@keyframes mover_tesis {
+  0% {left: 100px;}
+  50% {left: -800px;}
+  100% {left: 100px;}
+}
+.Imagen_Tesis{
+  position: relative;
+  left: 40px;
+  top: -160px;
+}
 
+/*Componente Error*/
+.Error_404{
+  text-align: center;
 
-/**/
+}
 /**/
