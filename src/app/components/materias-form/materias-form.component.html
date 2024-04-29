@@ -1,0 +1,89 @@
+<div class="Inicial" *ngIf='Configuraciones.Plan == "1"' >
+  <p>Descripcion:</p>
+  <p>Herramienta creada con la intencion de saber que materia esta disponible para cursar en el Cuatrimestre, con la ventaja de que:</p>
+  <ul>
+    <li>Esta disponible fuera del tiempo de inscripcion</li>
+    <li>Esta disponible para Personas que no esten cursando la carrera</li>
+    <li>No tira materias raras como ultimamente la pagina de la UNLu</li>
+  </ul>
+  <p>Fitchurs:</p>
+  <ul>
+    <li>Disponible en WebMovil</li>
+    <li>Posibilidad de Pasarse a otro plan por equivalencias en tiempo record (No Implementada)</li>
+    <li>Un resumen lindo para poner en el curriculumn (No Implementada)</li>
+  </ul>
+      <span class="Botones_Elegir" (click)="Empezar()">Empezar </span>
+</div>
+<div class="{{Class_Elegir_Plan}}" *ngIf='Configuraciones.Plan == "" ' >
+  <p>Elegi el Plan:</p>
+  <span class="Botones_Elegir" (click)="Elegir_Plan('18.04')">18.04</span>
+  <span class="Botones_Elegir" (click)="Elegir_Plan('18.05')">18.05</span>
+  <span class="Botones_Elegir" >Mixto(*)</span>
+  <span class="Botones_Elegir" (click)="Elegir_Plan('48.02')">48.02</span>
+  <span class="Botones_Elegir" (click)="Elegir_Plan('48.03')">48.03</span>
+  <p>(*)Si sos del Plan 18.04 y optas por hacer materias del Plan 18.05</p>
+</div>
+<div class="{{Class_Elegir_Orientacion}}" *ngIf='Configuraciones.Elegir_Orientacion'>
+  <p>Elegi La Orientacion del Plan:</p>
+  <span class="Botones_Elegir" (click)="Elegir_Orientacion('Eco')">Orientacion Ecología</span>
+  <span class="Botones_Elegir" (click)="Elegir_Orientacion('Mol')">Orientación Biología Celular y Molecular</span>
+</div>
+  <div class="Plan_de_Materias" *ngIf='Configuraciones.Desplegar_Plan'>
+    <p class="P_Plan">{{Materias.Plan}}</p>
+    <div class="Tabla">
+      <table>
+        <tr>
+          <th class="Tabla_Header">Cuatrimestre Perteneciente</th>
+          <!-- BUG:
+          <th class="Tabla_Header">Cód. Asign.</th>
+           -->
+          <th class="Tabla_Header">Asignaturas</th>
+          <!-- BUG:
+          <th class="Tabla_Header">Correlatividad (1)</th>
+          <th class="Tabla_Header">Hs. Sem.</th>
+          <th class="Tabla_Header">Hs. Tot.</th>
+           -->
+          <th class="Tabla_Header">Estado</th>
+          <!-- BUG:
+          <th class="Tabla_Header">Veces Cursada</th>
+          -->
+        </tr>
+        <tr *ngFor="let materia of Materias.Materias; index as i;"
+            [ngClass]="{ 'Hecha_True': Materias.Materias[i].Hecha,
+                       'Primero': Materias.Materias[i].Cuatrimestre == 'Primero',
+                       'Segundo': Materias.Materias[i].Cuatrimestre == 'Segundo',
+                       'Ambos': Materias.Materias[i].Cuatrimestre == 'Ambos'}"
+            >
+          <td  class="Tabla_Fila_Item" >{{Materias.Materias[i].Cuatrimestre_Perteneciente}}</td>
+          <!-- BUG:
+          <td  class="Tabla_Fila_Item" >{{Materias.Materias[i].Numero}}</td>
+          -->
+          <td  class="Tabla_Fila_Item">{{Materias.Materias[i].Nombre}}</td>
+          <!-- BUG:
+          <td  class="Tabla_Fila_Item" [className]="Materias.Materias[i].Hecha ? 'Hecha_True' : 'Hecha_False'" >{{Materias.Materias[i].Requiere}}</td>
+          <td  class="Tabla_Fila_Item">{{Materias.Materias[i].Horas_Semanales}}</td>
+          <td  class="Tabla_Fila_Item">{{Materias.Materias[i].Horas_Totales}}</td>
+          -->
+          <td  class="Tabla_Fila_Item" *ngIf='Materias.Materias[i].Disponible' >
+            <input type="checkbox" (change)="$event.target.checked? (evento_check(i, true)) : (evento_check(i, false))"
+            [ngClass]="{ 'Tesis': Materias.Materias[i].Nombre == 'Tesis de Grado'}">
+          </td>
+          <!-- BUG:
+          <td>
+            <input type="number" name="" value="1" width="20px">
+          </td>
+          -->
+          </tr>
+
+      </table>
+    </div>
+    <div class="Imagen_Tesis" *ngIf='egg'>
+      <img src="./assets/img/C34.jpg" alt="">
+    </div>
+    <div class="{{Class_Elegir_Plan}}">
+      <span>Una vez cargado todo, Deberias: </span>
+      <span class="Botones_Elegir"><a [routerLink]="['/Estado']" >Ir al componente Estado</a></span>
+      <span class="Botones_Elegir">Pedir pase con equivalencias</span>
+    </div>
+
+  </div>

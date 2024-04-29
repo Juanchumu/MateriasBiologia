@@ -1,0 +1,164 @@
+/*Retoques generales*/
+
+body{
+  background-color: rgb(144, 144, 123);
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+/*retoques del header*/
+
+header{
+  background-color: #007dec;
+  padding-top: 10px;
+}
+
+.Titulo{
+  padding-left: 25px;
+}
+.Pestanias{
+  width: 88%
+}
+header ul{
+}
+header ul li{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 20px;
+  width: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #539740;
+}
+header ul li a{
+  text-decoration: none;
+}
+ .active{
+   text-decoration: underline;
+}
+.List_Item{
+  display: inline-block;
+}
+.List_Item_Android{
+  display: grid;
+}
+
+
+/*Retoques del contenido*/
+.Fondo_Contenido{
+  background-color: white;
+}
+.contenido{
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: gray;
+  width: 70%;
+}
+.contenido_Android{
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: gray;
+}
+
+
+/*retoques del footer*/
+footer{
+  text-align: center;
+  background-color: #007dec;
+}
+
+
+/*Componente formulario*/
+.Elegir_Plan_Android{
+  display: grid;
+}
+.Botones_Elegir{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 300ms;
+  background-color: #539740;
+
+}
+.Botones_Elegir:hover{
+  background-color: #fff;
+}
+.Elegir_Orientacion{
+  padding-bottom: 30px;
+}
+.Elegir_Orientacion_Android{
+  display: grid;
+  padding-bottom: 30px;
+}
+
+.P_Plan{
+  text-decoration: underline;
+}
+.Tabla{
+  margin-bottom: 30px;
+}
+.Tabla_Header{
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid black;
+  background-color: #66ffcd;
+  color: black;
+}
+
+.Tabla_Fila_Item{
+  text-align: center;
+  font-size: 14px;
+  color: black;
+  border: 1px solid black;
+  height: 40px;
+}
+.Primero{
+  background-color: #a0a0ff;
+}
+.Segundo{
+  background-color: #4646ff8f;
+}
+.Ambos{
+  background-color: #e2e3e3;
+}
+.Hecha_True{
+  background-color: #4ee64e;
+}
+.Tesis{
+  position: relative;
+  animation: mover_tesis 12s infinite;
+}
+@keyframes mover_tesis {
+  0% {left: 100px;}
+  50% {left: -800px;}
+  100% {left: 100px;}
+}
+.Imagen_Tesis{
+  position: relative;
+  left: 40px;
+  top: -160px;
+}
+
+/*Componente Error*/
+.Error_404{
+  text-align: center;
+
+}
+/**/

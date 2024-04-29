@@ -1,0 +1,25 @@
+<header>
+  <div class="Titulo">
+    <h1>Materias de Biologia</h1>
+  </div>
+  <div class="Pestanias">
+    <ul>
+      <li class="{{Class_List_Item}}"><a [routerLink]="['/Materias-Formulario']" [routerLinkActive]="['active']" >Carga Manual</a></li>
+      <li class="{{Class_List_Item}}"><a [routerLink]="['/Importar-Exportar']" [routerLinkActive]="['active']" >Importar/Exportar</a></li>
+      <li class="{{Class_List_Item}}"><a [routerLink]="['/Estado']" [routerLinkActive]="['active']" >Estado</a></li>
+    </ul>
+  </div>
+</header>
+<div class="Fondo_Contenido">
+  <div class="{{Class_Contenido}}">
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</div>
+
+
+<footer>
+  <p>Visita <a href="https://juanchumu.github.io/Briefcase/">https://juanchumu.github.io/Briefcase/</a> para ver mas proyectos personales.</p>
+  <p>Estas en la version {{plataforma_cliente}} de la Pagina.</p>
+</footer>

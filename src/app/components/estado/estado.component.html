@@ -1,0 +1,23 @@
+<span>Estado en la carrera: </span>
+<span><button type="button" (click)="Mostrar_Materias_Disponibles()">Mostrar</button></span>
+<hr>
+<div class="" *ngIf='Mostrar_Materias.Mostrar'>
+  <p>{{Plan.Plan}}</p>
+  <span><p>Materias Disponibles para cursar en este año: </p></span>
+
+  <hr>
+  <p>Primer Cuatrimestre:</p>
+  <ul>
+    <li *ngFor="let materia of Materias_Disponibles_Primer_Cuatrimestre; index as i;">{{materia}}</li>
+  </ul>
+  <hr>
+  <p>Segundo Cuatrimestre:</p>
+  <ul>
+    <li *ngFor="let materia of Materias_Disponibles_Segundo_Cuatrimestre; index as i;">{{materia}}</li>
+  </ul>
+  <hr>
+  <p>Estadisticas:</p>
+  <p>Porcentaje de materias Aprobadas: {{Porcentaje_Materias_Aprobadas}}%</p> 
+  <p>Suma de Horas en todas las materias aprobadas: {{Suma_de_Horas_en_todas_las_Materias}}</p>
+
+</div>
